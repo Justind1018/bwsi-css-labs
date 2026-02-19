@@ -2,6 +2,7 @@
 lab_1b.py
 This module contains unit tests fo the simple_calculator function defined in lab_1b.py
 """
+
 import pytest
 from labs.lab_1.lab_1b import simple_calculator
 
@@ -9,7 +10,7 @@ def test_addition():
     assert simple_calculator("add", 5, 3) == 8
     assert simple_calculator("add", -2, 2) == 0
     assert simple_calculator("add", 0, 0) == 0
-    
+
 def simple_calculator(operation: str, num1: float, num2: float) -> float:   
     """
     Function that takes in two numbers and an operation (add, subtract, multiply, divide),
