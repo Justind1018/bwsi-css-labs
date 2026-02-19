@@ -6,6 +6,13 @@ This module contains unit tests fo the simple_calculator function defined in lab
 import pytest
 from labs.lab_1.lab_1b import simple_calculator
 
+def test_invalid_operation():
+    with pytest.raises(ValueError, match="Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'."):
+        simple_calculator("modulus", 5, 3)
+
+    with pytest.raises(ValueError, match="Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'."):
+        simple_calculator("power", 2, 3)
+        
 def test_addition():
     assert simple_calculator("add", 5, 3) == 8
     assert simple_calculator("add", -2, 2) == 0
